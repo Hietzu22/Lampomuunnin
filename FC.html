@@ -22,6 +22,13 @@
     <input type="text" name="temp" id="temp" placeholder="Input Temperature" onchange="muunnaArvo(this.value)">
     <h3 id="vastaus"></h3>
 
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">1 Desimal</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">2 Desimals</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">3 Desimals</label>
+
     <script>
         function muunnaArvo(luku){
             let muunnettuArvo=0;
@@ -32,7 +39,7 @@
 
         function tulostaVastaus(vastaus){
             document.getElementById("vastaus").innerHTML = vastaus;
-        }
+        }        
     </script>
 
 </body>
