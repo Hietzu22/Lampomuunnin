@@ -17,17 +17,20 @@
         <a href="CK.html">Celsius Into Kelvin</a>
     </div>
 
-    <h1>Temperature Converter</h1>
-    <h3>Fahrenheit into Celsius</h3>
-    <input type="text" name="temp" id="temp" placeholder="Input Temperature" onchange="muunnaArvo(this.value)">
-    <h3 id="vastaus"></h3>
-
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">1 Desimal</label><br>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">2 Desimals</label><br>
-    <input type="radio" id="other" name="gender" value="other">
-    <label for="other">3 Desimals</label>
+    <main id="content">
+        <h1>Temperature Converter</h1>
+        <h3>Fahrenheit into Celsius</h3>
+        <input type="text" name="temp" id="temp" placeholder="Input Temperature" onkeyup="muunnaArvo(this.value)">
+        <h3 id="vastaus"></h3>
+    
+        <input type="radio" id="desi1" name="desi" value="1" checked onclick="muunnaArvo(document.getElementById('temp').value)">
+        <label for="male">1 Desimal</label><br>
+        <input type="radio" id="desi2" name="desi" value="2">
+        <label for="female">2 Desimals</label><br>
+        <input type="radio" id="desi3" name="desi" value="3">
+        <label for="other">3 Desimals</label>
+    </main>
+    
 
     <script>
         function muunnaArvo(luku){
@@ -38,6 +41,10 @@
         }
 
         function tulostaVastaus(vastaus){
+            
+            let r = document.querySelector('input[name=desi]:checked').value;
+            vastaus = vastaus.toFixed(r);
+            
             document.getElementById("vastaus").innerHTML = vastaus;
         }        
     </script>
