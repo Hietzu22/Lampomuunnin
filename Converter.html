@@ -8,19 +8,11 @@
 </head>
 <body>
 
-    <div class="topnav">
-        <a href="FC.html">Fahrenheit Into Celsius</a>
-        <a href="CF.html">Celsius Into Fahrenheit</a>
-        <a href="FK.html">Fahrenheit Into Kelvin</a>
-        <a href="KF.html">Kelvin Into Fahrenheit</a>
-        <a href="KC.html">Kelvin Into Celsius</a>
-        <a href="CK.html">Celsius Into Kelvin</a>
-    </div>
-
     <main id="content">
         <h1>Temperature Converter</h1>
 
         <select id="Convs" name="Convs">
+            <option value="Choose">Choose a Converter</option>
             <option value="FC">Fahrenheit Into Celsius</option>
             <option value="CF">Celsius Into Fahrenheit</option>
             <option value="FK">Fahrenheit Into Kelvin</option>
@@ -29,7 +21,8 @@
             <option value="CK">Celsius Into Kelvin</option>
         </select>
 
-        <h3>Kelvin Into Fahrenheit</h3>
+        <h3>Input Temperature</h3>
+
         <input type="text" name="temp" id="temp" placeholder="Input Temperature" onkeyup="muunnaArvo(this.value)">
         <h3 id="vastaus"></h3>
     
