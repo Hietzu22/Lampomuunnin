@@ -26,39 +26,36 @@
         <input type="text" name="temp" id="temp" placeholder="Input Temperature" onkeyup="laske(this.value)">
         <h3 id="vastaus"></h3>
     
-        <input type="radio" id="desi1" name="desi" value="1" checked onclick="muunnaArvo(document.getElementById('temp').value)">
+        <input type="radio" id="desi1" name="desi" value="1" checked onclick="laske(document.getElementById('temp').value)">
         <label for="desi1">1 Desimal</label><br>
-        <input type="radio" id="desi2" name="desi" value="2" onclick="muunnaArvo(document.getElementById('temp').value)">
+        <input type="radio" id="desi2" name="desi" value="2" onclick="laske(document.getElementById('temp').value)">
         <label for="desi2">2 Desimals</label><br>
-        <input type="radio" id="desi3" name="desi" value="3" onclick="muunnaArvo(document.getElementById('temp').value)">
+        <input type="radio" id="desi3" name="desi" value="3" onclick="laske(document.getElementById('temp').value)">
         <label for="desi3">3 Desimals</label>
     </main>
 
     <script>
+
         function laske(luku){
             let temp = luku * 1;
             let Convs = document.getElementById('Convs').value;
             let tulos = '';
-        
+            let r = document.querySelector('input[name=desi]:checked').value;
 
             if (Convs == 'Choose') {
                 tulos = 'You Didnt choose a Converter';
             } else if (Convs == 'FC') {
-                tulos = FC(temp);
+                tulos = FC(temp).toFixed(r);
             }
             tulostaVastaus(tulos)
         }
 
         function tulostaVastaus(vastaus){
-
-            let r = document.querySelector('input[name=desi]:checked').value;
-            vastaus = vastaus.toFixed(r);
-
-            document.getElementById("tulos").innerHTML = tulos;
+            document.getElementById("vastaus").innerHTML = vastaus;
         }
 
-        function FC(l) {
-            return (l - 32) / 1.8
+        function FC(f) {
+            return (f - 32) / 1.8
         }
     </script>
 
