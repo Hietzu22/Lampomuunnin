@@ -46,7 +46,7 @@
             } else if (Convs == 'FC') {
                 tulos = FC(temp);
             }
-            tulostaVastaus(tulos);
+            tulostaVastaus(tulos)
         }
 
         function tulostaVastaus(vastaus){
@@ -54,7 +54,7 @@
             let r = document.querySelector('input[name=desi]:checked').value;
             vastaus = vastaus.toFixed(r);
 
-            document.getElementById("vastaus").innerHTML = vastaus;
+            document.getElementById("tulos").innerHTML = tulos;
         }
 
         function FC(l) {
