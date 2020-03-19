@@ -41,14 +41,24 @@
             let Convs = document.getElementById('Convs').value;
             let tulos = '';
             let r = document.querySelector('input[name=desi]:checked').value;
+            }
 
             if (Convs == 'Choose') {
                 tulos = 'You Didnt choose a Converter';
             } else if (Convs == 'FC') {
                 tulos = FC(temp).toFixed(r);
+            } else if (Convs == 'CF') {
+                tulos = FC(temp).toFixed(r);
+            } else if (Convs == 'FK') {
+                tulos = FC(temp).toFixed(r);
+            } else if (Convs == 'KF') {
+                tulos = FC(temp).toFixed(r);
+            } else if (Convs == 'KC') {
+                tulos = FC(temp).toFixed(r);
+            } else (Convs == 'CK') {
+                tulos = FC(temp).toFixed(r);
             }
-            tulostaVastaus(tulos)
-        }
+            tulostaVastaus(tulos);
 
         function tulostaVastaus(vastaus){
             document.getElementById("vastaus").innerHTML = vastaus;
@@ -57,6 +67,27 @@
         function FC(f) {
             return (f - 32) / 1.8
         }
+
+        function CF(c) {
+            return (c) * 1.8 + 32
+        }
+
+        function FK(f) {
+            return (f + 459.67) / 1.8
+        }
+
+        function KF(k) {
+            return (k) * 1.8 - 459.67
+        }
+
+        function KC(k) {
+            return (k) - 273.15
+        }
+
+        function CK(c) {
+            return (c) + 273.15
+        }
+
     </script>
 
 </body>
