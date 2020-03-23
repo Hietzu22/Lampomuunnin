@@ -36,12 +36,11 @@
 
     <script>
 
-        function laske(luku){
+        function laske(luku) {
             let temp = luku * 1;
             let Convs = document.getElementById('Convs').value;
-            let tulos = '';
             let r = document.querySelector('input[name=desi]:checked').value;
-            }
+            let tulos = '';
 
             if (Convs == 'Choose') {
                 tulos = 'You Didnt choose a Converter';
@@ -60,6 +59,7 @@
             }
 
             tulostaVastaus(tulos);
+        }
 
         function tulostaVastaus(vastaus){
             document.getElementById("vastaus").innerHTML = vastaus;
