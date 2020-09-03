@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Temperature Converter</title>
+    <title>Lämpömuunnin</title>
 </head>
 <body>
 
     <main id="content">
-        <h1>Temperature Converter</h1>
+        <h1>Lämpömuunnin</h1>
 
         <select id="Convs" name="Convs">
-            <option value="Choose">Choose a Converter</option>
-            <option value="FC">Fahrenheit Into Celsius</option>
-            <option value="CF">Celsius Into Fahrenheit</option>
-            <option value="FK">Fahrenheit Into Kelvin</option>
-            <option value="KF">Kelvin Into Fahrenheit</option>
-            <option value="KC">Kelvin Into Celsius</option>
-            <option value="CK">Celsius Into Kelvin</option>
+            <option value="Choose">Valitse Muunnin</option>
+            <option value="FC">Fahrenheit > Celsius</option>
+            <option value="CF">Celsius > Fahrenheit</option>
+            <option value="FK">Fahrenheit > Kelvin</option>
+            <option value="KF">Kelvin > Fahrenheit</option>
+            <option value="KC">Kelvin > Celsius</option>
+            <option value="CK">Celsius > Kelvin</option>
         </select>
 
-        <h3>Input Temperature</h3>
+        <h3>Lämpötila</h3>
 
-        <input type="text" name="temp" id="temp" placeholder="Input Temperature" onkeyup="laske(this.value)">
+        <input type="text" name="temp" id="temp" placeholder="Lämpötila" onkeyup="laske(this.value)">
         <h3 id="vastaus"></h3>
     
         <input type="radio" id="desi1" name="desi" value="1" checked onclick="laske(document.getElementById('temp').value)">
-        <label for="desi1">1 Desimal</label><br>
+        <label for="desi1">1 Desimaali</label><br>
         <input type="radio" id="desi2" name="desi" value="2" onclick="laske(document.getElementById('temp').value)">
-        <label for="desi2">2 Desimals</label><br>
+        <label for="desi2">2 Desimaalia</label><br>
         <input type="radio" id="desi3" name="desi" value="3" onclick="laske(document.getElementById('temp').value)">
-        <label for="desi3">3 Desimals</label>
+        <label for="desi3">3 Desimaalia</label>
     </main>
 
     <script>
@@ -43,7 +43,7 @@
             let tulos = '';
 
             if (Convs == 'Choose') {
-                tulos = 'You Didnt choose a Converter';
+                tulos = 'Et Valinnut muunninta';
             } else if (Convs == 'FC') {
                 tulos = FC(temp).toFixed(r);
             } else if (Convs == 'CF') {
